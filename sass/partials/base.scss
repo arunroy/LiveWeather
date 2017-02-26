@@ -16,10 +16,95 @@ $mobile-width: 500px;
 // DOM Elements
 
 //header styling
+.geosuggest{
+  display: inline;
+}
+#headerIconImage{
+  animation-name: dynamicShadow;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dynamicShadow {
+  0%{
+    -webkit-filter: drop-shadow(1px 1px 1px #222);
+    filter: drop-shadow(1px 1px 1px #222);
+  }
+  20%{
+    -webkit-filter: drop-shadow(2px 2px 2px #222);
+    filter: drop-shadow(2px 2px 2px #222);
+  }
+  40%{
+    -webkit-filter: drop-shadow(3px 3px 3px #222);
+    filter: drop-shadow(3px 3px 3px #222);
+  }
+  50%{
+    -webkit-filter: drop-shadow(4px 4px 4px #222);
+    filter: drop-shadow(4px 4px 4px #222);
+  }
+  60%{
+    -webkit-filter: drop-shadow(4px 4px 5px #222);
+    filter: drop-shadow(4px 4px 5px #222);
+  }
+  80%{
+    -webkit-filter: drop-shadow(5px 5px 6px #222);
+    filter: drop-shadow(5px 5px 6px #222);
+  }
+
+  100%{
+    -webkit-filter: drop-shadow(5px 5px 7px #222);
+    filter: drop-shadow(5px 5px 7px #222);
+  }
+}
+
+@keyframes headerAnimation {
+    0%{background-color: -webkit-linear-gradient(left, #dbf0fa , #6297be); /* For Safari 5.1 to 6.0 */
+       background-color: -o-linear-gradient(right, #dbf0fa, #6297be); /* For Opera */
+       background: -moz-linear-gradient(right, #dbf0fa, #6297be); /* For Firefox 3.6 to 15 */
+       background: linear-gradient(to right, #dbf0fa , #6297be); /* Standard syntax */
+      }
+    15%{background-color: -webkit-linear-gradient(left, #dbf0fa , #508ab7); /* For Safari 5.1 to 6.0 */
+       background-color: -o-linear-gradient(right, #dbf0fa, #508ab7); /* For Opera */
+       background: -moz-linear-gradient(right, #dbf0fa, #508ab7); /* For Firefox 3.6 to 15 */
+       background: linear-gradient(to right, #dbf0fa , #508ab7); /* Standard syntax */
+      }
+    30%{background-color: -webkit-linear-gradient(left, #dbf0fa , #457da8); /* For Safari 5.1 to 6.0 */
+       background-color: -o-linear-gradient(right, #dbf0fa, #457da8); /* For Opera */
+       background: -moz-linear-gradient(right, #dbf0fa, #457da8); /* For Firefox 3.6 to 15 */
+       background: linear-gradient(to right, #dbf0fa , #457da8); /* Standard syntax */
+      }
+    45%{background-color: -webkit-linear-gradient(left, #dbf0fa , #3e7096); /* For Safari 5.1 to 6.0 */
+       background-color: -o-linear-gradient(right, #dbf0fa, #3e7096); /* For Opera */
+       background: -moz-linear-gradient(right, #dbf0fa, #3e7096); /* For Firefox 3.6 to 15 */
+       background: linear-gradient(to right, #dbf0fa , #3e7096); /* Standard syntax */
+      }
+    60%{background-color: -webkit-linear-gradient(left, #dbf0fa , #376384); /* For Safari 5.1 to 6.0 */
+       background-color: -o-linear-gradient(right, #dbf0fa, #376384); /* For Opera */
+       background: -moz-linear-gradient(right, #dbf0fa, #376384); /* For Firefox 3.6 to 15 */
+       background: linear-gradient(to right, #dbf0fa , #376384); /* Standard syntax */
+      }
+    75%{background-color: -webkit-linear-gradient(left, #dbf0fa , #2f5572); /* For Safari 5.1 to 6.0 */
+       background-color: -o-linear-gradient(right, #dbf0fa, #2f5572); /* For Opera */
+       background: -moz-linear-gradient(right, #dbf0fa, #2f5572); /* For Firefox 3.6 to 15 */
+       background: linear-gradient(to right, #dbf0fa , #2f5572); /* Standard syntax */
+      }
+    100%{background-color: -webkit-linear-gradient(left, #dbf0fa , #284860); /* For Safari 5.1 to 6.0 */
+       background-color: -o-linear-gradient(right, #dbf0fa, #284860); /* For Opera */
+       background: -moz-linear-gradient(right, #dbf0fa, #284860); /* For Firefox 3.6 to 15 */
+       background: linear-gradient(to right, #dbf0fa , #284860); /* Standard syntax */
+      }
+}
+
+@-webkit-keyframes headerAnimation {
+    0%{background-color: red;}
+    25%{background-color: white;}
+    50%{background-color: blue;}
+    100%{background-color: green}
+}
 
 .weather-widget {
     width: 100%;
-    color: white;
+    color: #383838;
     font-family: league-gothic, sans-serif;
     font-weight: 100;
     font-style: normal;
@@ -37,8 +122,9 @@ $mobile-width: 500px;
 }
 
 div #headerStyle{
-   text-align: center; 
-   color:#2a2a2a;
+   text-align: center;
+   text-shadow: 2px 2px 6px #222;
+   color: #e1e1e1;
    font-weight: 700;
    font-size: xx-large;
    padding-bottom: 20px;
@@ -46,14 +132,23 @@ div #headerStyle{
 }
 
 #headerDiv{
-   background-color: #f7f9f9;
-   
+  //  animation-name: headerAnimation;
+  //  animation-duration: 5s;
+  //  -webkit-animation-name: headerAnimation;
+  //  -webkit-animation-duration: 5s;
+  //  animation-iteration-count: infinite;\
+  background-color: -webkit-linear-gradient(left, #dbf0fa , #457da8); /* For Safari 5.1 to 6.0 */
+   background-color: -o-linear-gradient(right, #dbf0fa, #457da8); /* For Opera */
+   background: -moz-linear-gradient(right, #dbf0fa, #457da8); /* For Firefox 3.6 to 15 */
+   background: linear-gradient(to right, #dbf0fa , #457da8); /* Standard syntax */
+  margin-bottom: 20px;
+
 }
 
 .weeklyItem{
 	color:  #2a2a2a;
 	width: 150px;
-	padding: 5px 40px 0px 40px;	
+	padding: 5px 40px 0px 40px;
 	background-color: #f7f9f9;
 	border-style: dotted;
 	border: 1px solid black;
@@ -62,7 +157,7 @@ div #headerStyle{
 
 .weekly-weather-widget{
 	border-style: dotted;
-	border-color: black;	
+	border-color: black;
 }
 
 
@@ -79,8 +174,8 @@ div #headerStyle{
     width: 100%;
     text-align: center;
     border-bottom: 2px solid white;
-    
-     
+
+
 
     @include mobile {
         height: 350px;
@@ -113,8 +208,8 @@ div #headerStyle{
     margin-right: auto;
     text-align: center;
     font-size: 2.5em;
-    
-	    
+
+
 
     .temp {
         font-size: 2.5em;
@@ -135,8 +230,8 @@ div #headerStyle{
             font-size: 1.5em; //1.5
             line-height: 0.8em;
         }
-        
-       
+
+
     }
 
     .humidity, .wind {
@@ -148,8 +243,8 @@ div #headerStyle{
 
         .wi {
             vertical-align: top;
-             width: 50px; 
-           
+             width: 50px;
+
 
             @include mobile {
                 width: 10px;
@@ -159,16 +254,16 @@ div #headerStyle{
 
     .humidity {
         margin-bottom: 1px;
-        
+
     }
 
     .wind {
         .wi {
             font-size: .8em;
-             margin-left: 55px; 
+             margin-left: 55px;
         }
         .vel {
-            font-size: .9em; 
+            font-size: .9em;
         }
     }
 }
@@ -178,4 +273,3 @@ div #headerStyle{
   overflow: hidden;
   border-width: 0;
 }
-

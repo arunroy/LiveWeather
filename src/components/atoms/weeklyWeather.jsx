@@ -8,7 +8,7 @@ var WeeklyWeather = React.createClass({
         temp1 : []
       });
     },
-    
+
     getHourlyData : function(){
         alert("reached the hourly data");
         var hourlyCast = this.props.temp1;
@@ -20,28 +20,28 @@ var WeeklyWeather = React.createClass({
         });
         return(
             <div>
-                
-                
+
+
             </div>
         )
-    
+
     },
-    
+
     render : function(){
         //console.log(this.props.temp1)
 		var dayCast = this.props.temp1;
-        
+
 		var weatherClass=classNames('wi  wi-owm-'+dayCast.weatherIcon+' weekly-icon');
          return(
             <div className="weeklyItem" onClick = {this.getHourlyData}>
                  <p>{dayCast.date.format('dddd')}</p>
                  <span className="weather"><i className={weatherClass}></i></span>
-                 <p>{Math.ceil(dayCast.hourly[0].temp - 273.15)}C</p>	 
+                 <p>{Math.ceil(dayCast.hourly[0].temp - 273.15)}&#x2103;</p>
 	        </div>
         );
     }
-   
-    
+
+
 });
 
 module.exports=WeeklyWeather;
